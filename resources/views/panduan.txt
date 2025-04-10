@@ -34,6 +34,8 @@ php artisan migrate --> Menjalakan migrasi
 
 composer run dev
 
+db > create migrate > create model > create seeder > create factory > create controller > isi migrasi 
+> php artisan migrate > buat/isi factory > buat seeder > jalankan seeder > buat model > buat controller(bertahap) & UI
 Relasi : 
 1:1 = 
 public function profile()
