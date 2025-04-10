@@ -1,0 +1,69 @@
+CMD : 
+Laravel new nama_projek
+cd nama_projek
+code . (buka langsung di VSCode)
+
+.env :
+DB_CONNECTION=pgsql
+DB_HOST=127.0.0.1
+DB_PORT=5432
+DB_DATABASE=airline_ticket_db
+DB_USERNAME=postgres
+DB_PASSWORD=admin
+
+Terminal :
+php artisan make:migration create_<Nama Migration>_table --> Membuat migrasi untuk table 
+
+php artisan make:seeder <Nama Seeder> --> Membuat seeder
+
+php artisan make:model <Nama Model> --> Membuat model
+
+php artisan make:controller <Nama Controller> --> Membuat controller
+
+php artisan db:seed --class=<Nama Seeder> --> Menjalakankan Seeder
+
+php artisan route:list --> Melihat route
+
+php artisan storage:link 
+
+php artisan make:factory <Nama Factory> --model=Model yg dibuat --> Membuat Factory
+
+php artisan migrate:fresh --seed --> Menghapus semua isi data dummy
+
+php artisan migrate --> Menjalakan migrasi
+
+composer run dev
+
+Relasi : 
+1:1 = 
+public function profile()
+{
+    return $this->hasOne(Profile::class);
+}
+
+public function user()
+{
+    return $this->belongsTo(User::class);
+}
+
+1:M =
+public function tickets()
+{
+    return $this->hasMany(Ticket::class);
+}
+
+public function flight()
+{
+    return $this->belongsTo(Flight::class);
+}
+
+N:M =
+public function roles()
+{
+    return $this->belongsToMany(Role::class);
+}
+
+public function users()
+{
+    return $this->belongsToMany(User::class);
+}
