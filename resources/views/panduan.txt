@@ -24,7 +24,7 @@ php artisan db:seed --class=<Nama Seeder> --> Menjalakankan Seeder
 
 php artisan route:list --> Melihat route
 
-php artisan storage:link 
+php artisan storage:link
 
 php artisan make:factory <Nama Factory> --model=Model yg dibuat --> Membuat Factory
 
